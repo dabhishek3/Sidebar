@@ -1,0 +1,41 @@
+<style>body {font-family: "Lato", sans-serif;}</style>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><img src="./assets/Abhi.png"style="width: 80px;"style="height:90px"></mat-toolbar>
+    <br>
+    <mat-nav-list>
+      <a mat-list-item href="#"><i class="fa fa-fw fa-home">Home</i></a>
+      <a routerLink="/apply"><a mat-list-item href="#"><i class="fa fa-fw fa-user">Apply</i></a></a>
+      <a mat-list-item href="#"><i class="fa fa-fw fa-wrench">Services</i></a>
+      <a mat-list-item href="#"><i class="fa fa-fw fa-envelope">Contact</i></a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a data-toggle="collapse" class="togglebtn button" data-target="#id">
+      <a mat-list-item href="#"><i class="fa fa-share-square">&nbsp;Share</i></a>
+      </a>
+      <div id="id" class="collapse">
+        <a mat-list-item href="#"><i class="fa fa-facebook-square">&nbsp;Facebook</i></a>
+        <a mat-list-item href="#"><i class="fa fa-twitter-square">&nbsp;Services</i></a>
+      </div>
+      
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
